@@ -76,6 +76,7 @@ Categories.getCategories()
             populateFireworks();
         }else if($("#select-box")[0].value === "1"){
             console.log("one");
+            populateDemolition();
         }
     });
 });
@@ -112,6 +113,28 @@ let populateFireworks = function(){
             <td>${item.description}</td?
         </tr>`;
         console.log(fireworksArray);
+        $("#table").append(tableInfo);
+    });
+};
+
+let populateDemolition = function(){
+    var demolitionArray =[];
+    for (var i=0;i<typesArray.length;i++){
+        if(typesArray[i].category === 1){
+            demolitionArray.push({
+                name : typesArray[i].name,
+                description : typesArray[i].description
+            });
+        }
+    }
+
+    demolitionArray.forEach(function(item){
+        var tableInfo =
+        `<tr>
+            <td>${item.name}</td>
+            <td>${item.description}</td?
+        </tr>`;
+        console.log(demolitionArray);
         $("#table").append(tableInfo);
     });
 };
