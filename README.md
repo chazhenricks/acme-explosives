@@ -10,7 +10,7 @@ Here's an example.
 
 categories.json
 
-`{
+```{
     "categories": [
         {
             "id": 0,
@@ -21,14 +21,15 @@ categories.json
             "name": "Demolition"
         }
     ]
-}`
+}
+```
 Product Types
 
 Create a JSON file describing types for each category of your products. For each type, add a key/value pair that creates a relationship to the corresponding category. Create at least 3 types for each category.
 
 types.json
 
-`{
+```{
     "types": [
         {
             "id": 0,
@@ -37,14 +38,15 @@ types.json
             "description": "Fireworks intended for recreational use during holiday celebrations"
         }
     ]
-}`
+}
+```
 Product Details
 
 Create a JSON file describing each product you offer. Add a key/value pair that creates a relationship to the appropriate product type. Add at least 3 products for each type.
 
 products.json
 
-`{
+```{
     "products": [{
         "fairy_sparklers": {
             "id": 0,
@@ -53,7 +55,8 @@ products.json
             "description": "Multi-colored sparklers that are safe for any age."
         }
     }]
-}`
+}
+```
 ## User interface
 
 Create a simple user interface for your product catalog where a user can select a category from a dropdown. When a category is selected, you must use Promises to read, first, from the categories.json to load that array of objects, then load types.json, then products.json.

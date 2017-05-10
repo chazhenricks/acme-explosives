@@ -1,0 +1,40 @@
+{
+    "types": [
+        {
+            "id": 0,
+            "category": 0,
+            "name": "personal",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+            "id": 1,
+            "category": 0,
+            "name": "big",
+            "description": "These things is HUGE"
+        },
+        {
+            "id": 2,
+            "category": 0,
+            "name": "lame",
+            "description": "These fireworks are honestly pretty dumb"
+        },
+        {
+            "id": 3,
+            "category": 1,
+            "name": "forced entry",
+            "description": "Every been locked out of your house before? Use these!"
+        },
+        {
+            "id": 4,
+            "category": 1,
+            "name": "non lethal",
+            "description": "These wont kill you, but they'll get pretty close"
+        },
+        {
+            "id": 5,
+            "category": 1,
+            "name": "lethal",
+            "description": "Use under parental supervision only"
+        }
+    ]
+}
