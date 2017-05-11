@@ -4,7 +4,7 @@
 let productsList = [];
 
 let getProducts = function() {
-
+    //loads JSON file.
     return new Promise((resolve, reject) => {
 
         var loader = new XMLHttpRequest();
@@ -12,9 +12,10 @@ let getProducts = function() {
 
         loader.addEventListener("load", function(){
             productsList = JSON.parse(this.responseText).products;
-            resolve(productsList);
+            resolve();
         });
         loader.addEventListener("error", function(){
+            console.log("An Error occured");
             reject();
         });
 
@@ -22,4 +23,8 @@ let getProducts = function() {
     });
 };
 
-module.exports = {getProducts};
+let showProducts = function(){
+    return productsList;
+};
+
+module.exports = {getProducts, showProducts};

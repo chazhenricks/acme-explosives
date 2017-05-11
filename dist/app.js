@@ -2,11 +2,10 @@
 "use strict";
 
 let categoriesList = [];
-let category1 = "";
-let category2 = "";
+
 
 let getCategories = function() {
-
+    //loads JSON file.
     return new Promise((resolve, reject) => {
 
         var loader = new XMLHttpRequest();
@@ -14,9 +13,10 @@ let getCategories = function() {
 
         loader.addEventListener("load", function(){
             categoriesList = JSON.parse(this.responseText).categories;
-            resolve(categoriesList);
+            resolve();
         });
         loader.addEventListener("error", function(){
+            console.log("An Error occured");
             reject();
         });
 
@@ -28,15 +28,8 @@ let showCategories = function() {
     return categoriesList;
 };
 
-let showCat1 = function() {
-    return category1;
-};
 
-let showCat2 = function() {
-    return category2;
-};
-
-module.exports = { getCategories, showCategories, showCat1, showCat2 };
+module.exports = { getCategories, showCategories};
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -55,89 +48,30 @@ let Products = require("./products.js");
 let DomStuff = require("./dom.js");
 
 let categoryArray = [];
-let typesArray = [];
 let productsArray = [];
+let typesArray = [];
 
 
 Categories.getCategories()
-.then(function(data){
-    categoryArray = data;
-
-    for (var i=0;i<categoryArray.length;i++){
-        var optionsInfo =`<option id="opt-${i}" value="${categoryArray[i].id}">${data[i].name}</option>`;
-        $("#select-box").append(optionsInfo);
-    }
-
-})
-.then(function(){
-    $("#select-btn").click(function(){
-        if($("#select-box")[0].value === "0"){
-            console.log("zero");
-            populateFireworks();
-        }else if($("#select-box")[0].value === "1"){
-            console.log("one");
-            populateDemolition();
-        }
-    });
-});
-
-Types.getTypes()
-.then(function(data){
-    typesArray = data;
-    console.log("typesArray", typesArray);
-});
-
-Products.getProducts()
-.then(function(data){
-    productsArray = data;
-    console.log("productsArray", productsArray);
-});
-
-
-
-let populateFireworks = function(){
-    var fireworksArray =[];
-    for (var i=0;i<typesArray.length;i++){
-        if(typesArray[i].category === 0){
-            fireworksArray.push({
-                name : typesArray[i].name,
-                description : typesArray[i].description
-            });
-        }
-    }
-
-    fireworksArray.forEach(function(item){
-        var tableInfo =
-        `<tr>
-            <td>${item.name}</td>
-            <td>${item.description}</td?
-        </tr>`;
-        console.log(fireworksArray);
-        $("#table").append(tableInfo);
-    });
-};
-
-let populateDemolition = function(){
-    var demolitionArray =[];
-    for (var i=0;i<typesArray.length;i++){
-        if(typesArray[i].category === 1){
-            demolitionArray.push({
-                name : typesArray[i].name,
-                description : typesArray[i].description
-            });
-        }
-    }
-
-    demolitionArray.forEach(function(item){
-        var tableInfo =
-        `<tr>
-            <td>${item.name}</td>
-            <td>${item.description}</td?
-        </tr>`;
-        console.log(demolitionArray);
-        $("#table").append(tableInfo);
-    });
-};
+.then(
+    () =>{
+    categoryArray = Categories.showCategories();
+    Products.getProducts();
+    },
+    console.error()
+).then(
+    () =>{
+    productsArray = Products.showProducts();
+    Types.getTypes();
+    },
+    console.error()
+).then(
+    () =>{
+    typesArray = Types.showTypes();
+    console.log(Types.showTypes());
+    },
+    console.error()
+);
 
 
 
@@ -164,6 +98,91 @@ let populateDemolition = function(){
 
 
 
+
+
+
+
+
+
+
+
+//     categoryArray = data;
+
+//     for (var i=0;i<categoryArray.length;i++){
+//         var optionsInfo =`<option id="opt-${i}" value="${categoryArray[i].id}">${data[i].name}</option>`;
+//         $("#select-box").append(optionsInfo);
+//     }
+
+// })
+// .then(function(){
+//     $("#select-btn").click(function(){
+//         if($("#select-box")[0].value === "0"){
+//             console.log("zero");
+//             populateFireworks();
+//         }else if($("#select-box")[0].value === "1"){
+//             console.log("one");
+//             populateDemolition();
+//         }
+//     });
+// });
+
+// Types.getTypes()
+// .then(function(data){
+//     typesArray = data;
+//     console.log("typesArray", typesArray);
+// });
+
+// Products.getProducts()
+// .then(function(data){
+//     productsArray = data;
+//     console.log("productsArray", productsArray);
+// });
+
+
+
+// let populateFireworks = function(){
+//     var fireworksArray =[];
+//     for (var i=0;i<typesArray.length;i++){
+//         if(typesArray[i].category === 0){
+//             fireworksArray.push({
+//                 name : typesArray[i].name,
+//                 description : typesArray[i].description
+//             });
+//         }
+//     }
+
+//     fireworksArray.forEach(function(item){
+//         var tableInfo =
+//         `<tr>
+//             <td>${item.name}</td>
+//             <td>${item.description}</td?
+//         </tr>`;
+//         console.log(fireworksArray);
+//         $("#table").append(tableInfo);
+//     });
+// };
+
+// let populateDemolition = function(){
+//     var demolitionArray =[];
+//     for (var i=0;i<typesArray.length;i++){
+//         if(typesArray[i].category === 1){
+//             demolitionArray.push({
+//                 name : typesArray[i].name,
+//                 description : typesArray[i].description
+//             });
+//         }
+//     }
+
+//     demolitionArray.forEach(function(item){
+//         var tableInfo =
+//         `<tr>
+//             <td>${item.name}</td>
+//             <td>${item.description}</td?
+//         </tr>`;
+//         console.log(demolitionArray);
+//         $("#table").append(tableInfo);
+//     });
+// };
 
 },{"./categories.js":1,"./dom.js":2,"./products.js":4,"./types.js":5}],4:[function(require,module,exports){
 
@@ -172,7 +191,7 @@ let populateDemolition = function(){
 let productsList = [];
 
 let getProducts = function() {
-
+    //loads JSON file.
     return new Promise((resolve, reject) => {
 
         var loader = new XMLHttpRequest();
@@ -180,9 +199,10 @@ let getProducts = function() {
 
         loader.addEventListener("load", function(){
             productsList = JSON.parse(this.responseText).products;
-            resolve(productsList);
+            resolve();
         });
         loader.addEventListener("error", function(){
+            console.log("An Error occured");
             reject();
         });
 
@@ -190,7 +210,11 @@ let getProducts = function() {
     });
 };
 
-module.exports = {getProducts};
+let showProducts = function(){
+    return productsList;
+};
+
+module.exports = {getProducts, showProducts};
 
 },{}],5:[function(require,module,exports){
 "use strict";
@@ -198,7 +222,7 @@ module.exports = {getProducts};
 let typesList = [];
 
 let getTypes = function() {
-
+    //loads JSON file.
     return new Promise((resolve, reject) => {
 
         var loader = new XMLHttpRequest();
@@ -206,9 +230,10 @@ let getTypes = function() {
 
         loader.addEventListener("load", function(){
             typesList = JSON.parse(this.responseText).types;
-            resolve(typesList);
+            resolve();
         });
         loader.addEventListener("error", function(){
+            console.log("An Error occured");
             reject();
         });
 
@@ -216,6 +241,10 @@ let getTypes = function() {
     });
 };
 
-module.exports = {getTypes};
+let showTypes = function (){
+    return typesList;
+};
+
+module.exports = {getTypes, showTypes};
 
 },{}]},{},[3]);

@@ -3,7 +3,7 @@
 let typesList = [];
 
 let getTypes = function() {
-
+    //loads JSON file.
     return new Promise((resolve, reject) => {
 
         var loader = new XMLHttpRequest();
@@ -11,9 +11,10 @@ let getTypes = function() {
 
         loader.addEventListener("load", function(){
             typesList = JSON.parse(this.responseText).types;
-            resolve(typesList);
+            resolve();
         });
         loader.addEventListener("error", function(){
+            console.log("An Error occured");
             reject();
         });
 
@@ -21,4 +22,8 @@ let getTypes = function() {
     });
 };
 
-module.exports = {getTypes};
+let showTypes = function (){
+    return typesList;
+};
+
+module.exports = {getTypes, showTypes};
