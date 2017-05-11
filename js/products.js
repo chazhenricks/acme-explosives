@@ -1,5 +1,6 @@
-
 "use strict";
+
+console.log("Products");
 
 let productsList = [];
 
@@ -12,7 +13,8 @@ let getProducts = function() {
 
         loader.addEventListener("load", function(){
             productsList = JSON.parse(this.responseText).products;
-            resolve();
+            console.log("productsList", productsList);
+            resolve(productsList);
         });
         loader.addEventListener("error", function(){
             console.log("An Error occured");
@@ -27,4 +29,4 @@ let showProducts = function(){
     return productsList;
 };
 
-module.exports = {getProducts, showProducts};
+

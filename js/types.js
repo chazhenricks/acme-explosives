@@ -1,5 +1,7 @@
 "use strict";
 
+console.log("Types");
+
 let typesList = [];
 
 let getTypes = function() {
@@ -11,7 +13,7 @@ let getTypes = function() {
 
         loader.addEventListener("load", function(){
             typesList = JSON.parse(this.responseText).types;
-            resolve();
+            resolve(typesList);
         });
         loader.addEventListener("error", function(){
             console.log("An Error occured");
@@ -26,4 +28,4 @@ let showTypes = function (){
     return typesList;
 };
 
-module.exports = {getTypes, showTypes};
+

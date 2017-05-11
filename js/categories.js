@@ -1,4 +1,5 @@
 "use strict";
+console.log("Categories");
 
 let categoriesList = [];
 
@@ -12,7 +13,7 @@ let getCategories = function() {
 
         loader.addEventListener("load", function(){
             categoriesList = JSON.parse(this.responseText).categories;
-            resolve();
+            resolve(categoriesList);
         });
         loader.addEventListener("error", function(){
             console.log("An Error occured");
@@ -28,4 +29,3 @@ let showCategories = function() {
 };
 
 
-module.exports = { getCategories, showCategories};

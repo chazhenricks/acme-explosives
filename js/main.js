@@ -2,33 +2,32 @@
 
 console.log("MAIN.JS");
 
-let Categories = require("./categories.js");
-let Types = require("./types.js");
-let Products = require("./products.js");
-let DomStuff = require("./dom.js");
+
 
 let categoryArray = [];
 let productsArray = [];
 let typesArray = [];
 
 
-Categories.getCategories()
-.then(
-    () =>{
-    categoryArray = Categories.showCategories();
-    Products.getProducts();
+getCategories().then(
+    function(data){
+    categoryArray = data;
+    console.log(categoryArray);
     },
     console.error()
-).then(
-    () =>{
-    productsArray = Products.showProducts();
-    Types.getTypes();
+);
+
+getProducts().then(
+    function(data){
+    productsArray = data;
+    console.log(productsArray);
     },
     console.error()
-).then(
-    () =>{
-    typesArray = Types.showTypes();
-    console.log(Types.showTypes());
+);
+getTypes().then(
+    function(data){
+    typesArray = data;
+    console.log(typesArray);
     },
     console.error()
 );
