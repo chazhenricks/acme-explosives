@@ -1,52 +1,52 @@
  <thead>
     <tr>
-        <th colspan="9"> {{categories.[1].name}}</th>
+        <th colspan="9" class="text-center"> <b>{{categories.[1].name}}</b></th>
     </tr>
 </thead>
 <tbody>
     <tr>
         {{#each types}}
             {{#if (eq category 1)}}
-            <td colspan='3'>{{name}}</td>
+            <td colspan='3' class="text-center"><b>{{name}}</b></td>
             {{/if}}
         {{/each}}
     </tr>
     <tr>
-        <td colspan='3'>{{types.[3].description}}</td>
-        <td colspan='3'>{{types.[4].description}}</td>
-        <td colspan='3'>{{types.[5].description}}<td>
-    </tr>
-    <tr>
-        {{#each products}}
-            {{#if (eq type 3)}}
-            <td> {{name}} </td>
-            {{/if}}
-        {{/each}}
-         {{#each products}}
-            {{#if (eq type 4)}}
-            <td> {{name}} </td>
-            {{/if}}
-        {{/each}}
-         {{#each products}}
-            {{#if (eq type 5)}}
-            <td> {{name}} </td>
-            {{/if}}
-        {{/each}}
+        <td colspan='3' class="text-center">{{types.[3].description}}</td>
+        <td colspan='3' class="text-center">{{types.[4].description}}</td>
+        <td colspan='3' class="text-center">{{types.[5].description}}<td>
     </tr>
     <tr>
         {{#each products}}
             {{#if (eq type 3)}}
-            <td> {{description}} </td>
+            <td class="text-center"> {{name}} </td>
             {{/if}}
         {{/each}}
          {{#each products}}
             {{#if (eq type 4)}}
-            <td> {{description}} </td>
+            <td class="text-center"> {{name}} </td>
             {{/if}}
         {{/each}}
          {{#each products}}
             {{#if (eq type 5)}}
-            <td> {{description}} </td>
+            <td class="text-center"> {{name}} </td>
+            {{/if}}
+        {{/each}}
+    </tr>
+    <tr>
+        {{#each products}}
+            {{#if (eq type 3)}}
+            <td class="text-center"> {{description}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 4)}}
+            <td class="text-center"> {{description}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 5)}}
+            <td class="text-center"> {{description}} </td>
             {{/if}}
         {{/each}}
     </tr>

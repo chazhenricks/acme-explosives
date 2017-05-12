@@ -1418,9 +1418,9 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"2":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td colspan='3'>"
+  return "            <td colspan='3' class=\"text-center\"><b>"
     + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
-    + "</td>\n";
+    + "</b></td>\n";
 },"4":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
@@ -1428,7 +1428,7 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"5":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td> "
+  return "            <td class=\"text-center\"> "
     + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
     + " </td>\n";
 },"7":function(container,depth0,helpers,partials,data) {
@@ -1446,7 +1446,7 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"12":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td> "
+  return "            <td class=\"text-center\"> "
     + container.escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"description","hash":{},"data":data}) : helper)))
     + " </td>\n";
 },"14":function(container,depth0,helpers,partials,data) {
@@ -1460,15 +1460,15 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return " <thead>\n    <tr>\n        <th colspan=\"9\"> "
+  return " <thead>\n    <tr>\n        <th colspan=\"9\" class=\"text-center\"> <b>"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.categories : depth0)) != null ? stack1["1"] : stack1)) != null ? stack1.name : stack1), depth0))
-    + "</th>\n    </tr>\n</thead>\n<tbody>\n    <tr>\n"
+    + "</b></th>\n    </tr>\n</thead>\n<tbody>\n    <tr>\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.types : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "    </tr>\n    <tr>\n        <td colspan='3'>"
+    + "    </tr>\n    <tr>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["3"] : stack1)) != null ? stack1.description : stack1), depth0))
-    + "</td>\n        <td colspan='3'>"
+    + "</td>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["4"] : stack1)) != null ? stack1.description : stack1), depth0))
-    + "</td>\n        <td colspan='3'>"
+    + "</td>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["5"] : stack1)) != null ? stack1.description : stack1), depth0))
     + "<td>\n    </tr>\n    <tr>\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.products : depth0),{"name":"each","hash":{},"fn":container.program(4, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -1491,9 +1491,9 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"2":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td colspan='3'>"
+  return "            <td colspan='3' class=\"text-center\"><b>"
     + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
-    + "</td>\n";
+    + "</b></td>\n";
 },"4":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
@@ -1501,7 +1501,7 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"5":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td> "
+  return "            <td class=\"text-center\"> "
     + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
     + " </td>\n";
 },"7":function(container,depth0,helpers,partials,data) {
@@ -1519,7 +1519,7 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"12":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "            <td> "
+  return "            <td class=\"text-center\"> "
     + container.escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"description","hash":{},"data":data}) : helper)))
     + " </td>\n";
 },"14":function(container,depth0,helpers,partials,data) {
@@ -1533,15 +1533,15 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return " <thead>\n    <tr>\n        <th colspan=\"9\"> "
+  return " <thead>\n    <tr>\n        <th colspan=\"9\" class=\"text-center\"> <b>"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.categories : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.name : stack1), depth0))
-    + "</th>\n    </tr>\n</thead>\n<tbody>\n    <tr>\n"
+    + "</b></th>\n    </tr>\n</thead>\n<tbody>\n    <tr>\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.types : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "    </tr>\n    <tr>\n        <td colspan='3'>"
+    + "    </tr>\n    <tr>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.description : stack1), depth0))
-    + "</td>\n        <td colspan='3'>"
+    + "</td>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["1"] : stack1)) != null ? stack1.description : stack1), depth0))
-    + "</td>\n        <td colspan='3'>"
+    + "</td>\n        <td colspan='3' class=\"text-center\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.types : depth0)) != null ? stack1["2"] : stack1)) != null ? stack1.description : stack1), depth0))
     + "<td>\n    </tr>\n    <tr>\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.products : depth0),{"name":"each","hash":{},"fn":container.program(4, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")

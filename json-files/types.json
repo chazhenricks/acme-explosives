@@ -3,37 +3,37 @@
         {
             "id": 0,
             "category": 0,
-            "name": "personal",
+            "name": "Personal",
             "description": "Fireworks intended for recreational use during holiday celebrations"
         },
         {
             "id": 1,
             "category": 0,
-            "name": "big",
+            "name": "Big",
             "description": "These things is HUGE"
         },
         {
             "id": 2,
             "category": 0,
-            "name": "lame",
+            "name": "Lame",
             "description": "These fireworks are honestly pretty dumb"
         },
         {
             "id": 3,
             "category": 1,
-            "name": "forced entry",
+            "name": "Rorced Entry",
             "description": "Every been locked out of your house before? Use these!"
         },
         {
             "id": 4,
             "category": 1,
-            "name": "non lethal",
+            "name": "Non Lethal",
             "description": "These wont kill you, but they'll get pretty close"
         },
         {
             "id": 5,
             "category": 1,
-            "name": "lethal",
+            "name": "Lethal",
             "description": "Use under parental supervision only"
         }
     ]
