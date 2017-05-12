@@ -1,10 +1,13 @@
 "use strict";
 
+
+
 console.log("Products");
 
+let products = {};
 let productsList = [];
 
-let getProducts = function() {
+products.getProducts = function() {
     //loads JSON file.
     return new Promise((resolve, reject) => {
 
@@ -13,7 +16,6 @@ let getProducts = function() {
 
         loader.addEventListener("load", function(){
             productsList = JSON.parse(this.responseText).products;
-            console.log("productsList", productsList);
             resolve(productsList);
         });
         loader.addEventListener("error", function(){
@@ -29,4 +31,4 @@ let showProducts = function(){
     return productsList;
 };
 
-
+module.exports = products;

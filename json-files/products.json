@@ -1,148 +1,112 @@
 {
     "products": [
-        {
-        "fairy_sparklers": {
+         {
             "id": 0,
             "type": 0,
             "name": "Fairy Sparklers",
             "description": "Multi-colored sparklers that are safe for any age."
-            }
         },
         {
-        "bottle_rockets": {
             "id": 1,
             "type": 0,
             "name": "Bottle Rockets",
             "description": "Will shoot out of a bottle."
-            }
         },
         {
-        "roman_candles": {
             "id": 2,
             "type": 0,
             "name": "Roman Candles",
             "description": "Shoots multi-colored balls of fire."
-            }
         },
         {
-        "earth_shaker": {
             "id": 3,
             "type": 1,
             "name": "Earth Shaker",
             "description": "Creates a large earth shattering boom."
-            }
         },
         {
-        "wake_neighbors": {
             "id": 4,
             "type": 1,
             "name": "Wake The Neighbors",
             "description": "Large, loud and bright. Will wake up entire neighborhood."
-            }
         },
         {
-        "what_say": {
             "id": 5,
             "type": 1,
             "name": "What Did You Say?",
             "description": "Our loudest commercially available product. Not responsible for loss of hearing."
-            }
         },
         {
-        "black_snake": {
             "id": 6,
             "type": 2,
             "name": "Black Snake",
             "description": "Light on one end and watch snake expand."
-            }
         },
         {
-        "bottle_caps": {
             "id": 7,
             "type": 2,
             "name": "Bottle Caps",
             "description": "Throw on ground and listen to the \"pop\"."
-            }
         },
         {
-        "normal_lighter": {
             "id": 8,
             "type": 2,
             "name": "Normal Lighter",
             "description": "This is just a lame, normal lighter."
-            }
         },
         {
-        "door_opener": {
             "id": 9,
             "type": 3,
             "name": "Door Opener",
             "description": "Line the plastic explosive rope around the perimeter of locked door you are trying to unlock."
-            }
         },
         {
-        "lock_decimator": {
             "id": 10,
             "type": 3,
             "name": "Lock Decimator",
             "description": "Place on deadbolt to un-deadbolt."
-            }
         },
         {
-        "what_wall": {
             "id": 11,
             "type": 3,
             "name": "What Wall?",
             "description": "Place explosive in pentagram pattern to summon Satan and destroy wall."
-            }
         },
         {
-        "hows_hand": {
             "id": 12,
             "type": 4,
             "name": "Hows Your Hand?",
             "description": "Place on captives hand. He will not like how it feels on his hand."
-            }
         },
         {
-        "ouch": {
             "id": 13,
             "type": 4,
             "name": "Ouch",
             "description": "Will produce a loud and uncomfortable explosion that will hurt but not leave any visible marks."
-            }
         },
         {
-        "shit_pants": {
             "id": 14,
             "type": 4,
             "name": "Shit Your Pants",
             "description": "Explosion produces a specific sound wave that will make target shit their pants."
-            }
         },
         {
-        "big_ouch": {
             "id": 15,
             "type": 5,
             "name": "Big Ouch",
             "description": "Big Brother of Ouch. Same results with very visible marks. Also Death."
-            }
         },
         {
-        "he_dead": {
             "id": 16,
             "type": 5,
             "name": "He Dead",
             "description": "Use this if you want to make dead."
-            }
         },
         {
-        "what_earth": {
             "id": 17,
             "type": 5,
             "name": "What Earth?",
             "description": "Big Brother of What Wall?. Place on ground in pentagram pattern to summon Satan and destroy the entire planet."
-            }
         }
     ]
 }

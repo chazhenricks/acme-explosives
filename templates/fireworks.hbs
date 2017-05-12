@@ -1,0 +1,55 @@
+ <thead>
+    <tr>
+        <th colspan="9"> {{categories.[0].name}}</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        {{#each types}}
+            {{#if (eq category 0)}}
+            <td colspan='3'>{{name}}</td>
+            {{/if}}
+        {{/each}}
+    </tr>
+    <tr>
+        <td colspan='3'>{{types.[0].description}}</td>
+        <td colspan='3'>{{types.[1].description}}</td>
+        <td colspan='3'>{{types.[2].description}}<td>
+    </tr>
+    <tr>
+        {{#each products}}
+            {{#if (eq type 0)}}
+            <td> {{name}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 1)}}
+            <td> {{name}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 2)}}
+            <td> {{name}} </td>
+            {{/if}}
+        {{/each}}
+    </tr>
+    <tr>
+        {{#each products}}
+            {{#if (eq type 0)}}
+            <td> {{description}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 1)}}
+            <td> {{description}} </td>
+            {{/if}}
+        {{/each}}
+         {{#each products}}
+            {{#if (eq type 2)}}
+            <td> {{description}} </td>
+            {{/if}}
+        {{/each}}
+    </tr>
+</tbody>
+
+

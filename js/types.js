@@ -2,9 +2,12 @@
 
 console.log("Types");
 
-let typesList = [];
 
-let getTypes = function() {
+
+let typesList = [];
+let types = {};
+
+types.getTypes = function() {
     //loads JSON file.
     return new Promise((resolve, reject) => {
 
@@ -24,8 +27,9 @@ let getTypes = function() {
     });
 };
 
-let showTypes = function (){
+types.showTypes = function (){
     return typesList;
 };
 
+module.exports = types;
 

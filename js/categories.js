@@ -1,10 +1,11 @@
 "use strict";
 console.log("Categories");
 
+
 let categoriesList = [];
+let categories = {};
 
-
-let getCategories = function() {
+categories.getCategories = function() {
     //loads JSON file.
     return new Promise((resolve, reject) => {
 
@@ -28,4 +29,4 @@ let showCategories = function() {
     return categoriesList;
 };
 
-
+module.exports = categories;

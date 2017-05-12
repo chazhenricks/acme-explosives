@@ -2,47 +2,72 @@
 
 console.log("MAIN.JS");
 
+var Handlebars = require('hbsfy/runtime'),
+    Categories = require("./categories.js"),
+    Products = require("./products.js"),
+    Types = require('./types.js'),
+    fireworkTemplate = require('../templates/fireworks.hbs'),
+    demolitionTemplate = require("../templates/demo.hbs"),
+    selectTemplate = require('../templates/select.hbs');
 
 
-let categoryArray = [];
-let productsArray = [];
-let typesArray = [];
+let allObj = {};
+
+var populateSelect = function(){
+    let selectData =
+    {
+        "categories" : [
+        {"name":allObj.categories[0].name},
+        {"name": allObj.categories[1].name}
+        ]
+    };
+    $("#select-box").append(selectTemplate(selectData));
+    populateTable();
+};
+
+var populateTable = function(){
+    var tableData = allObj;
+    Handlebars.registerHelper({eq: function (v1, v2) {
+        return v1 === v2;
+    }});
+
+    $("#select-btn").click(function(){
+        if($("#select-box")[0].value === "0"){
+            $("#table").html("");
+            $("#table").append(fireworkTemplate(tableData));
+        }else if($("#select-box")[0].value === "1"){
+            $("#table").html("");
+            $("#table").append(demolitionTemplate(tableData));
+        }
+    });
+};
 
 
-getCategories().then(
+Categories.getCategories().then(
     function(data){
-    categoryArray = data;
-    console.log(categoryArray);
+    allObj.categories = data;
     },
     console.error()
 );
 
-getProducts().then(
+Products.getProducts().then(
     function(data){
-    productsArray = data;
-    console.log(productsArray);
+    allObj.products = data;
     },
     console.error()
 );
-getTypes().then(
+Types.getTypes().then(
     function(data){
-    typesArray = data;
-    console.log(typesArray);
+    allObj.types= data;
+    console.log("allObj", allObj);
+    populateSelect();
     },
     console.error()
 );
 
 
 
-
-
-
-
-
-
-
-
-
+module.exports = allObj;
 
 
 
